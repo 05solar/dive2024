@@ -10,5 +10,6 @@ function toggleMenu() {
 document.getElementById('call-for-help').addEventListener('click', function() {
     const helpReason = document.getElementById('help-reason').value;
 
-    alert(`Help is on the way for ${helpReason}!`);
+  
+    window.location.href = 'helpwaiting_html.html';  
 });

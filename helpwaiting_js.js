@@ -19,6 +19,9 @@ setTimeout(function() {
         document.querySelector('.bottom-text').style.display = 'none'; // 하단 문구를 숨김
         const centralText = document.getElementById('central-text');
         centralText.classList.remove('hidden-text'); // 중앙 텍스트가 나타남
+        
+        // 글자 크기를 강제로 설정
+        centralText.style.fontSize = '40px'; // 글자 크기 강제 설정
         centralText.style.opacity = '1'; // 문구를 페이드 인
     }, 1000); // 원이 사라지는데 1초 소요
 }, 3000);

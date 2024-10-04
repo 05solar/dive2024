@@ -143,19 +143,20 @@ body {
     }
 }
 
-/* 중앙 문구 숨김 설정 (텍스트 크기와 중앙 배치 수정) */
 .hidden-text {
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    font-size: 60px !important; /* 텍스트 크기를 더 크게 조정 */
+    font-size: 60px !important; /* 글자 크기를 강제로 더 크게 설정 */
     color: #000000;
     font-weight: bold;
     position: absolute;
-    top: 50%; /* 중앙에 위치하도록 수정 */
+    top: 50%; /* 중앙에 위치 */
     left: 50%;
-    transform: translate(-50%, -50%); /* 가로, 세로 정확히 중앙 배치 */
-    z-index: 1; /* 중앙 텍스트가 다른 요소 위에 위치하도록 설정 */
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
+
+
 
 /* 하단 텍스트 */
 .bottom-text {

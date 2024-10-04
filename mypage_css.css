@@ -11,33 +11,34 @@ body {
 
 .container {
     width: 90%;
-    max-width: 550px; /* 컨테이너 크기를 키움 */
+    max-width: 550px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    background-color: #F2F9FF;
+    background-color: #F2F9FF; /* 배경 색상 */
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
-    min-height: 500px;
+    height: auto;
 }
 
 .header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 30px; /* 타이틀과 메뉴 아이콘 사이의 간격 */
+    margin-bottom: 20px;
+    gap: 20px;
     position: relative;
-    gap: 20px; /* 타이틀과 메뉴바 사이의 간격을 20px로 설정 */
 }
 
 .title {
     color: #0000FF;
-    font-size: 5vw; /* 반응형 글자 크기 */
+    font-size: 4vw; /* 반응형 글자 크기 */
+    flex-grow: 1;
+    text-align: left;
 }
 
 .highlight {
-    text-align: center;
     color: red; /* YOUTH의 색상을 빨간색으로 설정 */
 }
 
@@ -46,15 +47,15 @@ body {
 }
 
 .menu-icon {
-    padding: 5px; /* 메뉴 아이콘 패딩 줄이기 */
+    padding: 5px;
     cursor: pointer;
 }
 
 .menu-icon span {
     display: block;
-    width: 25px; /* 메뉴 아이콘 너비 */
-    height: 3px; /* 메뉴 아이콘 높이 */
-    margin: 3px; /* 메뉴 아이콘 내부 요소 간격 줄이기 */
+    width: 25px;
+    height: 3px;
+    margin: 3px;
     background-color: black;
 }
 
@@ -71,7 +72,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* 지도보다 위에 위치하도록 z-index 설정 */
+    z-index: 1000;
 }
 
 .menu-items a {
@@ -82,30 +83,43 @@ body {
     padding: 5px;
 }
 
-/* 마이페이지 콘텐츠 스타일 */
 .mypage-content {
-    text-align: left;
+    text-align: center;
     margin-top: 20px;
     padding-bottom: 20px;
 }
 
 .profile {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.profile p {
-    font-size: 18px;
-    font-weight: bold;
-}
-
 .profile-pic {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     background-color: #e0e0e0;
     border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.nickname {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0036FF;
+}
+
+.info {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
 }
 
 .point-section {
@@ -114,6 +128,7 @@ body {
     align-items: center;
     border-top: 1px solid #000;
     padding-top: 10px;
+    margin-bottom: 20px;
 }
 
 .point-icon {
@@ -127,4 +142,17 @@ body {
 .point-value {
     font-size: 24px;
     font-weight: bold;
+}
+
+.extra-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-card {
+    width: 45%;
+    height: 100px;
+    background-color: #F2F9FF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
 }

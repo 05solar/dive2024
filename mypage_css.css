@@ -124,8 +124,8 @@ body {
 
 .point-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* 포인트와 점수를 중앙에 정렬 */
+    align-items: center; /* 수직 정렬 */
     border-top: 1px solid #000;
     padding-top: 10px;
     margin-bottom: 20px;
@@ -133,16 +133,20 @@ body {
 
 .point-icon {
     font-size: 24px;
+    margin-right: 10px; /* 아이콘과 텍스트 사이의 간격 */
 }
 
 .point-text {
-    text-align: right;
+    display: flex;
+    align-items: center; /* 수직 정렬 */
 }
 
 .point-value {
     font-size: 24px;
     font-weight: bold;
+    margin-left: 10px; /* 텍스트와 숫자 사이의 간격 */
 }
+
 
 .extra-icons {
     display: flex;

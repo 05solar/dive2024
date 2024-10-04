@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Map Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mainmap_css.css">
+</head>
+<body>
+    <!-- 컨테이너 시작 -->
+    <div class="container">
+        <!-- 페이지 타이틀 및 메뉴바 -->
+        <div class="header">        
+            <!-- 메뉴 버튼 -->
+            <div class="menu-bar">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- 메뉴 항목 -->
+                <div class="menu-items" id="menuItems">
+                    <a href="mypage_html.html">My Page</a>
+                    <a href="map_html.html">Map</a>
+                    <a href="mainmap_html.html">Path recommend</a>
+                </div>
+            </div>
+
+            <h1 class="title">
+                WORLD <span class="highlight">YOUTH</span> DAY 2027
+            </h1>
+        </div>
+
+        <!-- 메인맵 콘텐츠 -->
+        <div class="map-options">
+            <div class="option">
+                <a href="map_html.html">
+                    <img src="findpath.png" alt="Find Route">
+                    <h2>🔎 Find Route</h2>
+                </a>
+            </div>
+            <div class="option">
+                <a href="map_html.html">
+                    <img src="recommendroute.png" alt="Recommend Route">
+                    <h2>🔎 Recommend Route</h2>
+                </a>
+            </div>
+        </div>
+
+        <!-- 도움말 버튼 (이미지로만 표시) -->
+        <div class="help-button">
+            <a href="#">
+                <img src="help.png" alt="help button">
+            </a>
+        </div>
+    </div>
+
+    <script src="mainmap_js.js"></script> <!-- 외부 JS 파일 -->
+</body>
+</html>

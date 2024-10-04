@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; /* 전체 배경 */
+}
+
+.container {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #F2F9FF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+    position: relative;
+}
+
+.title {
+    color: #0000FF;
+    font-size: 4vw;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.highlight {
+    color: red;
+}
+
+.menu-bar {
+    position: relative;
+}
+
+.menu-icon {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 3px;
+    background-color: black;
+}
+
+.menu-bar:hover .menu-items {
+    display: block;
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu-items a {
+    display: block;
+    margin: 5px 0;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* 달력 스타일 */
+.calendar {
+    margin-top: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.days-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+    color: red;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.days span {
+    width: 13%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color:

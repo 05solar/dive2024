@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Waiting Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="helpwaiting_css.css">
+</head>
+<body>
+    <!-- 컨테이너 시작 -->
+    <div class="container">
+        <!-- 페이지 타이틀 및 메뉴바 -->
+        <div class="header">        
+            <!-- 메뉴 버튼 -->
+            <div class="menu-bar">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- 메뉴 항목 -->
+                <div class="menu-items" id="menuItems">
+                    <a href="mypage_html.html">My Page</a>
+                    <a href="map_html.html">Map</a>
+                    <a href="mainmap_html.html">Path recommend</a>
+                </div>
+            </div>
+
+            <h1 class="title">
+                WORLD <span class="highlight">YOUTH</span> DAY 2027
+            </h1>
+        </div>
+
+        <!-- 중앙 원 애니메이션 -->
+        <div class="circle-container">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <!-- 중앙 문구는 초기 상태에서 숨겨져 있다가 원이 사라지면 나타남 -->
+            <p id="central-text" class="hidden-text">we find volunteer!</p>
+        </div>
+
+        <!-- 하단 텍스트 (초기 상태에서 표시) -->
+        <div class="bottom-text">
+            <p id="status-text">volunteers is going to you...</p>
+        </div>
+    </div>
+    <!-- 컨테이너 끝 -->
+
+    <script src="helpwaiting_js.js"></script> <!-- 외부 JS 파일 -->
+</body>
+</html>

@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Oswald', sans-serif; 
 }
+
 
 body {
     background-color: #f0f0f0; /* 전체 배경: 연한 회색 */
@@ -27,19 +28,21 @@ body {
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 30px; /* 타이틀과 메뉴 아이콘 사이의 간격 */
-    position: relative;
-    gap: 20px; /* 타이틀과 메뉴바 사이의 간격을 20px로 설정 */
+    position: relative;color: #0000FF;
+    gap: 10px; /* 타이틀과 메뉴바 사이의 간격을 20px로 설정 */
 }
 
 .title {
     color: #0000FF;
     font-size: 5vw; /* 반응형 글자 크기 */
+    font-weight: 400;
 }
 
 .highlight {
     text-align: center;
     color: red; /* YOUTH의 색상을 빨간색으로 설정 */
 }
+
 
 .menu-bar {
     position: relative;

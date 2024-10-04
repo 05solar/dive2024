@@ -21,6 +21,7 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
     min-height: 500px;
+    position: relative; /* 컨테이너에 relative 설정 */
 }
 
 .header {
@@ -29,7 +30,7 @@ body {
     align-items: center;
     margin-bottom: 30px; /* 타이틀과 메뉴 아이콘 사이의 간격 */
     position: relative;color: #0000FF;
-    gap: 10px; /* 타이틀과 메뉴바 사이의 간격을 20px로 설정 */
+    gap: 20px; /* 타이틀과 메뉴바 사이의 간격을 20px로 설정 */
 }
 
 .title {
@@ -109,6 +110,20 @@ body {
     margin-top: 10px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 도움말 버튼 */
+.help-button {
+    position: absolute; /* 컨테이너 내부에 고정 */
+    bottom: 20px; /* 컨테이너의 하단에서 20px 위로 */
+    right: 20px; /* 컨테이너의 오른쪽에서 20px 왼쪽으로 */
+    width: 50px;  /* 버튼 크기 */
+    height: 50px;
+}
+
+.help-button img {
+    width: 100%;  /* 버튼 크기에 맞춰 이미지 크기 조정 */
+    height: 100%;
 }
 
 /* 화면 크기에 따라 글자 크기 조정 (미디어 쿼리) */

@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; /* 전체 배경: 연한 회색 */
+}
+
+.container {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #F2F9FF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    height: 550px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+    position: relative;
+}
+
+.title {
+    color: #0000FF;
+    font-size: 5vw; /* 반응형 글자 크기 */
+    font-weight: 400;
+}
+
+.highlight {
+    text-align: center;
+    color: red; /* YOUTH의 색상을 빨간색으로 설정 */
+}
+
+
+.menu-bar {
+    position: relative;
+}
+
+.menu-icon {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 3px;
+    background-color: black;
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu-bar:hover .menu-items {
+    display: block;
+}
+
+.menu-items a {
+    display: block;
+    margin: 5px 0;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* 전체 간격 설정을 위해 margin-bottom을 추가 */
+.help-form h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0036FF;
+    margin: 30px 0; /* 제목과 그 다음 요소 사이의 간격을 넓힘 */
+    font-weight: 400;
+}
+
+.help-form label {
+    font-size: 14px;
+    color: #999;
+    font-weight: 400;
+    margin-bottom: 10px; /* 레이블과 그 다음 요소 사이의 간격 */
+}
+
+.help-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px; /* 선택 박스와 그 다음 요소 사이의 간격을 넓힘 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+}
+
+#call-for-help {
+    width: 100%;
+    padding: 12px;
+    margin-top: 30px; /* 버튼과 그 위 요소 사이의 간격을 넓힘 */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+
+#call-for-help:hover {
+    background-color: #0056b3;
+}

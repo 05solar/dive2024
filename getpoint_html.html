@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Points</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Baloo+Paaji+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="getpoint_css.css">
+</head>
+<body>
+    <!-- 컨테이너 시작 -->
+    <div class="container">
+        <!-- 페이지 타이틀 및 메뉴바 -->
+        <div class="header">
+            <!-- 메뉴 버튼 -->
+            <div class="menu-bar">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span> 
+                </div>
+                <!-- 메뉴 항목 -->
+                <div class="menu-items" id="menuItems">
+                    <a href="mypage_html.html">My Page</a>
+                    <a href="map_html.html">Map</a>
+                    <a href="pathrecommend_html.html">Path Recommend</a>
+                    
+                </div>
+            </div>
+
+            <h1 class="title">
+                WORLD <span class="highlight">YOUTH</span> DAY 2027
+            </h1>
+        </div>
+
+        <!-- 포인트 축하 섹션 -->
+        <div class="point-section">
+            <div class="coin-container">
+                <img src="point_firework.png" alt="Firework Image" class="firework-image">
+                <img src="point_coin.png" alt="Coin Image" class="coin-image"> <!-- 추가된 코인 이미지 -->
+            </div>
+            <h2>Congratulations!</h2>
+            <p class="points-text">get 100 points</p>
+        </div>
+
+    </div>
+    <!-- 컨테이너 끝 -->
+
+    <script src="getpoint_js.js"></script>
+</body>
+</html>

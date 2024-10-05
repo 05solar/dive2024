@@ -26,7 +26,8 @@
                 <div class="menu-items" id="menuItems">
                     <a href="mypage_html.html">My Page</a>
                     <a href="map_html.html">Map</a>
-                    <a href="pathrecommend_html.html">path recommend</a>
+                    <a href="pathrecommend_html.html">Path Recommend</a>
+                    <a href="getpoint_html.html">Get Point</a>
                 </div>
             </div>
 
@@ -37,38 +38,52 @@
 
         <!-- 지도 상단 필터 버튼 -->
         <div class="spot-buttons">
-            <button onclick="toggleMarkers('tour')">tour</button>
-            <button onclick="toggleMarkers('event')">event</button>
-            <button onclick="toggleMarkers('historic')">historic</button>
-            <button onclick="toggleMarkers('point')">point</button>
+            <button onclick="toggleMarkers('tour')">Tour</button>
+            <button onclick="toggleMarkers('event')">Event</button>
+            <button onclick="toggleMarkers('historic')">Historic</button>
+            <button onclick="toggleMarkers('point')">Point</button>
         </div>
 
         <!-- 구글 맵 -->
         <div id="map"></div>
 
+        <!-- Get Point 버튼 추가 -->
+        <div class="getpoint-button">
+            <a href="getpoint_html.html">
+                <img src="point_coin.png" alt="Get Point Button"> <!-- 이미지 파일 경로 설정 -->
+            </a>
+        </div>
+
+        <div class="second-coin">
+            <a href="getpoint_html.html">
+                <img src="point_coin.png" alt="Get Point Button 2"> <!-- 이미지 파일 경로 설정 -->
+            </a>
+        </div>
+
+        <!-- 정보 패널 -->
+        <div class="info-panel">
+            <div class="info-item">
+                <h3>부산시립미술관</h3>
+                <p>시간예술을 중심에 두고 가치를 담아 사람을 연결하는 미술관</p>
+            </div>
+            <div class="info-item">
+                <h3>벡스코</h3>
+                <p>001년 9월에 개장하여 오랜 기간 국내 최대 규모로 자랑했던 컨벤션 센터</p>
+            </div>
+            <div class="info-item">
+                <h3>예시 장소</h3>
+                <p>장소 설명</p>
+            </div>
+        </div>
+
         <!-- 도움말 버튼 추가 -->
         <div class="help-button">
             <a href="helprequest_html.html">
-                <img src="help.png" alt="help button">
+                <img src="help.png" alt="Help Button">
             </a>
         </div>
     </div>
     <!-- 컨테이너 끝 -->
-    <div class="info-panel">
-        <div class="info-item">
-            <h3>부산시립미술관</h3>
-            <p>시간예술을 중심에 두고 가치를 담아 사람을 연결하는 미술관</p>
-        </div>
-        <div class="info-item">
-            <h3>벡스코</h3>
-            <p>001년 9월에 개장하여 오랜 기간 국내 최대 규모로 자랑했던 컨벤션 센터</p>
-        </div>
-        <div class="info-item">
-            <h3>예시 장소</h3>
-            <p>장소 설명</p>
-        </div>
-    </div>
-    
 
     <script src="map_js.js"></script> <!-- 외부 JS 파일 -->
 </body>

@@ -84,24 +84,26 @@ body {
 /* 포인트 섹션 스타일 */
 .point-section {
     margin-top: 50px;
-    position: relative; /* 컨테이너 내부의 요소를 절대 위치로 설정할 수 있도록 relative 설정 */
+    position: relative;
 }
 
 /* 불꽃 이미지 */
 .firework-image {
-    width: 300px;
+    width: 350px;
     height: auto;
     position: relative;
-    margin-top: -70px;
+    top: -50px; /* 이미지를 더 위로 올림 */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* 코인 이미지 */
 .coin-image {
-    position: absolute; /* firework 이미지의 중앙에 배치 */
-    margin-top: -58%;
+    position: absolute; /* 불꽃 이미지 중앙에 코인을 배치 */
+    margin-top: -80%;
     left: 50%; /* 중앙 정렬 */
-    transform: translate(-50%, -50%); /* 정확한 중앙 배치 */
-    width: 200px; /* 코인 크기 조정 */
+    
+    width: 200px;
     height: auto;
     animation: spin 3s infinite linear; /* 회전 애니메이션 */
 }
@@ -117,12 +119,14 @@ body {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 30px;
+    margin-top: -100px;
     color: #0036FF;
 }
 
 .points-text {
     font-size: 28px;
     color: #0036FF;
+    margin-top: -5px;
     font-weight: bold;
 }

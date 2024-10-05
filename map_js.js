@@ -53,16 +53,22 @@ function initMap() {
     }
 }
 
-// 마커 추가 함수 (커스텀 아이콘 포함)
-function addMarker(position, map, color) {
+// 마커 추가 함수 (정보창 및 하단 정보 연동 포함)
+function addMarker(position, map, color, title, description) {
     const marker = new google.maps.Marker({
         position: position,
         map: map,
         icon: {
-            url: `http://maps.google.com/mapfiles/ms/icons/${color}-dot.png`, // Google Maps에서 제공하는 기본 마커 색상 URL
+            url: `http://maps.google.com/mapfiles/ms/icons/${color}-dot.png`,
         },
-        title: 'Marker'
+        title: title
     });
+
+    marker.addListener('click', function() {
+        // 마커 클릭 시 정보 창을 업데이트하고 표시
+        updateInfoPanel(title, description);
+    });
+
     return marker;
 }
 

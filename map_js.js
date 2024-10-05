@@ -26,9 +26,16 @@ const markerData = {
         { lat: 37.481234, lng: 126.944123, title: 'Historic Spot2' },
         { lat: 37.494567, lng: 126.964895, title: 'Historic Spot3' }
     ],
-    'point': [{ lat: 37.485952, lng: 126.957415, title: 'Point Spot' },
-        { lat: 37.471563, lng: 126.954632, title: 'Point Spot' },
-        { lat: 37.484152, lng: 126.964963, title: 'Point Spot' }
+    'cathedral': [{ lat: 37.502701, lng: 127.060135, title: 'daechidong cathedral' },
+        { lat: 37.508878, lng: 127.040997, title: 'Yeoksamdong cathedral' },
+        { lat: 37.498093, lng: 127.022828, title: 'Seochodong cathedral' },
+        { lat: 37.524812, lng: 127.050415, title: 'Chungdamdong cathedral' },
+        { lat: 37.515459, lng: 126.961063, title: 'Heoseockdong cathedral' },
+        { lat: 37.525144, lng: 126.977160, title: 'Hangang cathedral' },
+        { lat: 37.541273, lng: 127.006187, title: 'Seoul National cathedral' },
+        { lat: 37.546885, lng: 127.014225, title: 'Ocksudong cathedral' },
+        { lat: 37.570093, lng: 126.976418, title: 'Seoul cathedral' },
+        { lat: 37.580969, lng: 126.986067, title: 'Gaheoudong cathedral' }
     ]
 };
 
@@ -78,9 +85,9 @@ function toggleMarkers(type) {
 
     const colorMapping = {
         'tour': 'blue',
-        'event': 'red',
+        'event': 'yellow',
         'historic': 'green',
-        'point': 'yellow'
+        'cathedral': 'red'
     };
 
     const markerColor = colorMapping[type];

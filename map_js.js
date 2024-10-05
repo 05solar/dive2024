@@ -7,6 +7,7 @@ function toggleMenu() {
 // 지도 초기화
 let map;
 let markers = {};
+let customRoutePath; // 사용자 정의 경로를 저장할 변수
 
 // 마커 정보
 const markerData = {
@@ -44,6 +45,12 @@ function initMap() {
         fullscreenControl: false, // 전체 화면 버튼 숨기기
         streetViewControl: false, // 스트리트 뷰 버튼 숨기기
     });
+
+    // 사용자 정의 경로 마커 및 경로 표시 (pathrecommend 페이지에서 넘어올 때만 실행)
+    const customRouteMarkers = JSON.parse(localStorage.getItem('customRouteMarkers'));
+    if (customRouteMarkers) {
+        drawCustomRoute(customRouteMarkers);  // 경로 그리기 함수 호출
+    }
 }
 
 // 마커 추가 함수 (커스텀 아이콘 포함)
@@ -79,12 +86,37 @@ function toggleMarkers(type) {
 
 // 기존 마커를 제거하는 함수
 function clearMarkers() {
+    if (customRoutePath) {
+        customRoutePath.setMap(null);  // 기존 사용자 정의 경로 제거
+    }
+
     Object.keys(markers).forEach(type => {
         if (markers[type]) {
             markers[type].forEach(marker => marker.setMap(null));
         }
     });
     markers = {};
+}
+
+// 추가: 사용자 정의 마커와 경로 그리기 함수
+function drawCustomRoute(markerPositions) {
+    // 사용자 정의 마커 추가
+    const color = 'purple'; // 사용자 정의 경로 마커 색상
+    markerPositions.forEach(position => {
+        addMarker(position, map, color);
+    });
+
+    // 사용자 정의 마커들을 선으로 연결
+    customRoutePath = new google.maps.Polyline({
+        path: markerPositions.map(pos => ({ lat: pos.lat, lng: pos.lng })),
+        geodesic: true,
+        strokeColor: '#FF00FF',  // 경로 색상 (보라색)
+        strokeOpacity: 1.0,
+        strokeWeight: 2          // 경로 두께
+    });
+
+    // 경로를 지도에 표시
+    customRoutePath.setMap(map);
 }
 
 // 페이지 로드 시 initMap 함수 호출

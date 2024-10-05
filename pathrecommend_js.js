@@ -1,16 +1,18 @@
 function toggleMenu() {
     const menu = document.getElementById('menuItems');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
-    }
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 }
 
 document.getElementById('generate-route').addEventListener('click', function() {
-    const transportation = document.getElementById('transportation').value;
-    const kind = document.getElementById('kind').value;
+    const markerPositions = [{ lat: 37.481590, lng: 126.955834 },
+        { lat: 37.482490, lng: 126.953844},
+        { lat: 37.488350, lng: 126.951514 },
+        { lat: 37.484980, lng: 126.954624 }
+    ];  // 이 좌표는 예시입니다. 실제로 사용자가 선택한 좌표를 입력해야 합니다.
 
-    // 경로 선택 후 Map 페이지로 이동
-    window.location.href = 'map_html.html';  // Map 페이지의 실제 파일명 또는 URL로 변경
+    // LocalStorage에 저장
+    localStorage.setItem('customRouteMarkers', JSON.stringify(markerPositions));
+
+    // Map 페이지로 이동
+    window.location.href = 'map_html.html';  // 이동할 map 페이지의 경로로 변경
 });
